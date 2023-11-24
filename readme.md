@@ -2,7 +2,7 @@
 
 # SpoofDPI
 
-Read in other Languages: [🇬🇧English](https://github.com/xvzc/SpoofDPI), [🇰🇷한국어](https://github.com/xvzc/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/xvzc/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/xvzc/SpoofDPI/blob/main/readme_ru.md)
+Read in other Languages: [🇬🇧English](https://github.com/lehoangnb/SpoofDPI), [🇰🇷한국어](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ru.md)
 
 A simple and fast software designed to bypass **Deep Packet Inspection**  
   
@@ -38,12 +38,12 @@ wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash
 ```
 ## Go
 You can also install SpoofDPI with **go install**  
-`$ go install github.com/xvzc/SpoofDPI/cmd/spoof-dpi`  
+`$ go install github.com/lehoangnb/SpoofDPI/cmd/spoof-dpi`  
   > Remember that $GOPATH should be set in your $PATH
 
 ## Git
 You can also build your own  
-`$ git clone https://github.com/xvzc/SpoofDPI.git`  
+`$ git clone https://github.com/lehoangnb/SpoofDPI.git`  
 `$ cd SpoofDPI`  
 `$ go build ./cmd/...`  
 

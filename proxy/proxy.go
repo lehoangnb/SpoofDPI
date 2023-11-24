@@ -5,9 +5,9 @@ import (
 	"os"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/xvzc/SpoofDPI/net"
-	"github.com/xvzc/SpoofDPI/packet"
-	"github.com/xvzc/SpoofDPI/util"
+	"github.com/lehoangnb/SpoofDPI/net"
+	"github.com/lehoangnb/SpoofDPI/packet"
+	"github.com/lehoangnb/SpoofDPI/util"
 )
 
 type Proxy struct {

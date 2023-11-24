@@ -2,7 +2,7 @@
 
 # SpoofDPI
 
-Можете прочитать на других языках: [🇬🇧English](https://github.com/xvzc/SpoofDPI), [🇰🇷한국어](https://github.com/xvzc/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/xvzc/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/xvzc/SpoofDPI/blob/main/readme_ru.md)
+Можете прочитать на других языках: [🇬🇧English](https://github.com/lehoangnb/SpoofDPI), [🇰🇷한국어](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ru.md)
 
 Простое и быстрое программное обеспечение, созданное для обхода **Deep Packet Inspection**  
   
@@ -38,13 +38,13 @@ wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash
 ```
 ## Go
 Вы также можете установить SpoofDPI с помощью **go install**  
-`$ go install github.com/xvzc/SpoofDPI/cmd/spoof-dpi`  
+`$ go install github.com/lehoangnb/SpoofDPI/cmd/spoof-dpi`  
   > Не забудьте, что $GOPATH должен быть установлен в Вашем $PATH
 
 ## Git
 Вы также можете собрать SpoofDPI
 
-`$ git clone https://github.com/xvzc/SpoofDPI.git`  
+`$ git clone https://github.com/lehoangnb/SpoofDPI.git`  
 `$ cd SpoofDPI`  
 `$ go build ./cmd/...`  
 

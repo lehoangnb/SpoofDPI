@@ -2,7 +2,7 @@
 
 # SpoofDPI
 
-选择语言: [🇬🇧English](https://github.com/xvzc/SpoofDPI), [🇰🇷한국어](https://github.com/xvzc/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/xvzc/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/xvzc/SpoofDPI/blob/main/readme_ru.md)
+选择语言: [🇬🇧English](https://github.com/lehoangnb/SpoofDPI), [🇰🇷한국어](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/lehoangnb/SpoofDPI/blob/main/readme_ru.md)
 
 规避**深度包检测**的简单工具
   
@@ -44,12 +44,12 @@ wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash
 ## Go
 也可以用 **go install** 安装
  
-`$ go install github.com/xvzc/SpoofDPI/cmd/spoof-dpi`  
+`$ go install github.com/lehoangnb/SpoofDPI/cmd/spoof-dpi`  
  > 记得确认 $GOPATH 在你的 $PATH 中
  
 ## Git
 You can also build your own  
-`$ git clone https://github.com/xvzc/SpoofDPI.git`  
+`$ git clone https://github.com/lehoangnb/SpoofDPI.git`  
 `$ cd SpoofDPI`  
 `$ go build ./cmd/...`  
 

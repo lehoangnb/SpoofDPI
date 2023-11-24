@@ -7,8 +7,8 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/xvzc/SpoofDPI/doh"
-	"github.com/xvzc/SpoofDPI/packet"
+	"github.com/lehoangnb/SpoofDPI/doh"
+	"github.com/lehoangnb/SpoofDPI/packet"
 )
 
 const BUF_SIZE = 1024

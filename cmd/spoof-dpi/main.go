@@ -7,9 +7,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 	log "github.com/sirupsen/logrus"
-	"github.com/xvzc/SpoofDPI/doh"
-	"github.com/xvzc/SpoofDPI/proxy"
-	"github.com/xvzc/SpoofDPI/util"
+	"github.com/lehoangnb/SpoofDPI/doh"
+	"github.com/lehoangnb/SpoofDPI/proxy"
+	"github.com/lehoangnb/SpoofDPI/util"
 )
 
 func main() {

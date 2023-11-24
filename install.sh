@@ -3,7 +3,7 @@
 curl "https://api.github.com/repos/xvzc/SpoofDPI/releases/latest" |
     grep '"tag_name":' |
     sed -E 's/.*"([^"]+)".*/\1/' |
-    xargs -I {} curl -OL "https://github.com/xvzc/SpoofDPI/releases/download/"\{\}"/spoof-dpi-${1}.tar.gz"
+    xargs -I {} curl -OL "https://github.com/lehoangnb/SpoofDPI/releases/download/"\{\}"/spoof-dpi-${1}.tar.gz"
 
 mkdir -p ~/.spoof-dpi/bin
 
