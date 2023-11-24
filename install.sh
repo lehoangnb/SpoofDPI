@@ -1,6 +1,6 @@
 #!bin/bash
 
-curl "https://api.github.com/repos/xvzc/SpoofDPI/releases/latest" |
+curl "https://api.github.com/repos/lehoangnb/SpoofDPI/releases/latest" |
     grep '"tag_name":' |
     sed -E 's/.*"([^"]+)".*/\1/' |
     xargs -I {} curl -OL "https://github.com/lehoangnb/SpoofDPI/releases/download/"\{\}"/spoof-dpi-${1}.tar.gz"
