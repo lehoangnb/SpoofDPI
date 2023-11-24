@@ -19,7 +19,7 @@ var dns_server string
 func Init(dns string, nodoh bool) {
 	if nodoh {
 		isNodoh = true
-		dns_resolver.Config.SetTimeout(uint(10))
+		dns_resolver.Config.SetTimeout(uint(5))
 		dns_resolver.Config.RetryTimes = uint(2)
 		dns_server = dns
 	} else {
@@ -38,7 +38,12 @@ func Lookup(domain string) (string, bool, error) {
 			if len(results) < 1 {
 				return "", isNodoh, errors.New(" couldn't resolve the domain or blocked by dns server")
 			}
-			return results[0].Content, isNodoh, nil
+			for _, r := range results {
+				if r_content, _ := regexp.MatchString(ipRegex, r.Content); r_content {
+					return r.Content, isNodoh, nil
+				}
+			}
+			return "", isNodoh, errors.New(" couldn't get type A of domain")
 		} else {
 			return "", isNodoh, err
 		}
