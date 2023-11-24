@@ -62,14 +62,22 @@ func (conn *Conn) ReadBytes() ([]byte, error) {
 func (lConn *Conn) HandleHttp(p *packet.HttpPacket, timeout int) {
 	p.Tidy()
 
-	ip, err := doh.Lookup(p.Domain())
+	ip, dohmode, err := doh.Lookup(p.Domain())
 	if err != nil {
-		log.Error("[HTTP DOH] Error looking up for domain with ", p.Domain(), " ", err)
+		if dohmode {
+			log.Error("[HTTP Unencrypted] Error looking up for domain with ", p.Domain(), " ", err)
+		} else  {
+			log.Error("[HTTP DOH] Error looking up for domain with ", p.Domain(), " ", err)
+		}
 		lConn.Write([]byte(p.Version() + " 502 Bad Gateway\r\n\r\n"))
 		return
 	}
-
-	log.Debug("[DOH] Found ", ip, " with ", p.Domain())
+	
+	if dohmode {
+		log.Debug("[Unencrypted] Found ", ip, " with ", p.Domain())
+	} else {
+		log.Debug("[DOH] Found ", ip, " with ", p.Domain())
+	}
 
 	// Create connection to server
 	var port = "80"
@@ -108,14 +116,22 @@ func (lConn *Conn) HandleHttp(p *packet.HttpPacket, timeout int) {
 }
 
 func (lConn *Conn) HandleHttps(p *packet.HttpPacket, timeout int) {
-	ip, err := doh.Lookup(p.Domain())
+	ip, dohmode, err := doh.Lookup(p.Domain())
 	if err != nil {
-		log.Error("[HTTPS DOH] Error looking up for domain: ", p.Domain(), " ", err)
+		if dohmode {
+			log.Error("[HTTPS Unencrypted] Error looking up for domain: ", p.Domain(), " ", err)
+		} else {
+			log.Error("[HTTPS DOH] Error looking up for domain: ", p.Domain(), " ", err)
+		}
 		lConn.Write([]byte(p.Version() + " 502 Bad Gateway\r\n\r\n"))
 		return
 	}
-
-	log.Debug("[DOH] Found ", ip, " with ", p.Domain())
+	
+	if dohmode {
+		log.Debug("[Unencrypted] Found ", ip, " with ", p.Domain())
+	} else {
+		log.Debug("[DOH] Found ", ip, " with ", p.Domain())
+	}
 
 	// Create a connection to the requested server
 	var port = "443"

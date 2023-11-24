@@ -17,7 +17,7 @@ func main() {
     config := util.GetConfig()
 
 	p := proxy.New(config)
-	doh.Init(*config.Dns)
+	doh.Init(*config.Dns, *config.Nodoh)
 	if *config.Debug {
 		log.SetLevel(log.DebugLevel)
 	} else {

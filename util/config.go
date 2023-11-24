@@ -14,6 +14,7 @@ type Config struct {
 	Addr           *string
 	Port           *int
 	Dns            *string
+	Nodoh            *bool
 	Debug          *bool
 	NoBanner *bool
 	Timeout        *int
@@ -54,6 +55,7 @@ func ParseArgs() {
 	config.Addr = flag.String("addr", "127.0.0.1", "Listen addr")
 	config.Port = flag.Int("port", 8080, "port")
 	config.Dns = flag.String("dns", "8.8.8.8", "DNS server")
+	config.Nodoh = flag.Bool("nodoh", true, "Disable DOH DNS")
 	config.Debug = flag.Bool("debug", false, "true | false")
 	config.NoBanner = flag.Bool("no-banner", false, "true | false")
 	config.Timeout = flag.Int("timeout", 0, "timeout in milliseconds")
@@ -90,6 +92,7 @@ func PrintColoredBanner() {
 	pterm.DefaultBulletList.WithItems([]pterm.BulletListItem{
 		{Level: 0, Text: "ADDR    : " + fmt.Sprint(*config.Addr)},
 		{Level: 0, Text: "PORT    : " + fmt.Sprint(*config.Port)},
+		{Level: 0, Text: "NODOH   : " + fmt.Sprint(*config.Nodoh)},
 		{Level: 0, Text: "DNS     : " + fmt.Sprint(*config.Dns)},
 		{Level: 0, Text: "DEBUG   : " + fmt.Sprint(*config.Debug)},
 	}).Render()
@@ -108,6 +111,7 @@ func PrintSimpleInfo() {
 	fmt.Println("- ADDR    : ", *config.Addr)
 	fmt.Println("- PORT    : ", *config.Port)
 	fmt.Println("- DNS     : ", *config.Dns)
+	fmt.Println("- NODOH   : ", *config.Nodoh)
 	fmt.Println("- DEBUG   : ", *config.Debug)
 	fmt.Println("")
 }
