@@ -24,21 +24,21 @@ export PATH=$PATH:~/.spoof-dpi/bin
 
 - OSX
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx
 ```
 - Linux
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux
 ```
 ### wget
 用 wget 安装最新的二进制可执行文件
 - OSX
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx 
 ```
 - Linux
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux 
 ```
 
 ## Go

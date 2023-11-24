@@ -20,21 +20,21 @@ export PATH=$PATH:~/.spoof-dpi/bin
 Install the latest binary with curl
 - OSX
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx
 ```
 - Linux
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux
 ```
 ### wget
 Install the latest binary with wget
 - OSX
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx 
 ```
 - Linux
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux 
 ```
 ## Go
 You can also install SpoofDPI with **go install**  
@@ -88,8 +88,8 @@ Since most of websites in the world now support HTTPS, SpoofDPI doesn't bypass D
  > SpoofDPI doesn't decrypt your HTTPS requests, and that's why we don't need the SSL certificates.
 
 # Inspirations
+[SpoofDPI](https://github.com/xvzc/SpoofDPI) by @xvzc  
 [Green Tunnel](https://github.com/SadeghHayeri/GreenTunnel) by @SadeghHayeri  
 [GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI) by @ValdikSS
-
 
 

@@ -20,21 +20,21 @@ export PATH=$PATH:~/.spoof-dpi/bin
 최신 릴리즈를 curl 명령어로 설치하기
 - OSX
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx
 ```
 - Linux
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux
 ```
 ### wget
 최신 릴리즈를 wget 명령어로 설치하기
 - OSX
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx 
 ```
 - Linux
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux 
 ```
 ## Go
 **go install**로 설치하기

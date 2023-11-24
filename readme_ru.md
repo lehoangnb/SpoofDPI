@@ -20,21 +20,21 @@ export PATH=$PATH:~/.spoof-dpi/bin
 Установите последний бинарник с помощью curl
 - OSX
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx
 ```
 - Linux
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux
+curl -fsSL https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux
 ```
 ### wget
 Установите последний бинарник с помощью wget
 - OSX
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s osx 
 ```
 - Linux
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux 
+wget -O - https://raw.githubusercontent.com/lehoangnb/SpoofDPI/main/install.sh | bash -s linux 
 ```
 ## Go
 Вы также можете установить SpoofDPI с помощью **go install**  
