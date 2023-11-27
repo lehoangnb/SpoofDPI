@@ -6,6 +6,9 @@ import (
 	"regexp"
 	"strings"
 
+	"net/http"
+    "crypto/tls"
+
 	"github.com/pterm/pterm"
 	log "github.com/sirupsen/logrus"
 )
@@ -14,6 +17,7 @@ type Config struct {
 	Addr           *string
 	Port           *int
 	Dns            *string
+	Notls            *bool
 	Nodoh            *bool
 	Debug          *bool
 	NoBanner *bool
@@ -55,6 +59,7 @@ func ParseArgs() {
 	config.Addr = flag.String("addr", "127.0.0.1", "Listen addr")
 	config.Port = flag.Int("port", 8080, "port")
 	config.Dns = flag.String("dns", "8.8.8.8", "DNS server")
+	config.Notls = flag.Bool("notls", false, "Skip verify doh server")
 	config.Nodoh = flag.Bool("nodoh", true, "Disable DOH DNS")
 	config.Debug = flag.Bool("debug", false, "true | false")
 	config.NoBanner = flag.Bool("no-banner", false, "true | false")
@@ -68,6 +73,8 @@ func ParseArgs() {
 	)
 
 	flag.Parse()
+	
+	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: *config.Notls}
 
 	if len(allowedHosts) > 0 {
 		var escapedUrls []string
@@ -92,6 +99,7 @@ func PrintColoredBanner() {
 	pterm.DefaultBulletList.WithItems([]pterm.BulletListItem{
 		{Level: 0, Text: "ADDR    : " + fmt.Sprint(*config.Addr)},
 		{Level: 0, Text: "PORT    : " + fmt.Sprint(*config.Port)},
+		{Level: 0, Text: "NOTLS   : " + fmt.Sprint(*config.Notls)},
 		{Level: 0, Text: "NODOH   : " + fmt.Sprint(*config.Nodoh)},
 		{Level: 0, Text: "DNS     : " + fmt.Sprint(*config.Dns)},
 		{Level: 0, Text: "DEBUG   : " + fmt.Sprint(*config.Debug)},
@@ -111,6 +119,7 @@ func PrintSimpleInfo() {
 	fmt.Println("- ADDR    : ", *config.Addr)
 	fmt.Println("- PORT    : ", *config.Port)
 	fmt.Println("- DNS     : ", *config.Dns)
+	fmt.Println("- NOTLS   : ", *config.Notls)
 	fmt.Println("- NODOH   : ", *config.Nodoh)
 	fmt.Println("- DEBUG   : ", *config.Debug)
 	fmt.Println("")
