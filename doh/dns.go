@@ -31,10 +31,10 @@ func Lookup(domain string) (string, bool, error) {
 	ipRegex := "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
 
 	if r, _ := regexp.MatchString(ipRegex, domain); r {
-		if r, _ := regexp.MatchString("127.0.0", domain); r {
+		if r, _ := regexp.MatchString("^127.0.0", domain); r {
 			return "", isNodoh, errors.New(" Don't resolve loopback")
 		}
-		if r, _ := regexp.MatchString("0.0.0", domain); r {
+		if r, _ := regexp.MatchString("^0.0.0", domain); r {
 			return "", isNodoh, errors.New(" Don't resolve loopback")
 		}
 		return domain, isNodoh, nil
